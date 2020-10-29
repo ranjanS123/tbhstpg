@@ -13,18 +13,19 @@
     <style type="text/css">
       @font-face{
         font-family: 'fredokaone_regular';
-        src:url("../snap/skype/common/fonts/fredokaone_regular.ttf") format('truetype');
+        src:url("./fonts/fredokaone_regular.ttf") format('truetype');
       }
       @font-face{
-        font-family: 'raleway_regular';
-        src:url("../snap/skype/common/fonts/raleway_thin.ttf") format('truetype');
-      }
-      .fedorika-font{
-        font-family: 'fredokaone_regular';
-      }
-      .raleway-font{
         font-family: 'raleway_thin';
+        src:url("./fonts/raleway_thin.ttf") format('truetype');
       }
+      @font-face{
+        font-family: 'raleway_medium';
+        src:url("./fonts/raleway_medium.ttf") format('truetype');
+      }
+      .fedorika-font{ font-family: 'fredokaone_regular'; }
+      .raleway-font-m{ font-family: 'raleway_medium' }
+      .raleway-font{ font-family: 'raleway_thin'; }
       .p-color{color: #054568;}
       .d-block{
         width: 400px;
@@ -56,7 +57,7 @@
         width: 20px;
         height: 20px;
         border-radius: 100%;
-        background-color: #f2f2f2;
+        background-color: #e6e6e6;
       }
       .carousel-indicators li.active{
         background-color: #054568;
@@ -99,9 +100,8 @@
         a.button{
         text-decoration:none;
         }
-      .m-10{
-        margin: 10px;
-      }
+      .m-10{ margin: 10px; }
+      .b-font{ font-style: bold; }
       .s-png{
         width: 40px;
         float:left;
@@ -139,18 +139,19 @@
     <div class="row">
         <div class="col1">
           <div class="t-center" style="padding: 110px 100px 140px 100px;">
-            <img src="../Downloads/logo_tobbleKids_01.svg" class="logo-img">
+            <img src="./assets/logo_tobbleKids_01.svg" class="logo-img">
           </div>
           <h3 class="t-center fedorika-font pad-bottom-90"><span class="p-color xxx-font">Coming</span> <span class="xxx-font" style="color: #B3EA2F">Soon</span></h3>
           <h3 class="t-center p-color pad-bottom-20">Stay Connected</h3>
           <div class="t-center pad-bottom-20 social-btn-stck">
-            <a href="https://facebook.com/tobblekids" target="_blank" class="button p-color"><img src="../Downloads/instagram-tp.png" class="s-png">Instagram</a>
-            <a href="https://instagram.com/tobblekids" target="_blank" class="button p-color"><img src="../Downloads/facebook.svg" class="s-png">Facebook</a>
-            <a href="https://twitter.com/tobblekids"target="_blank" class="button p-color"><img src="../Downloads/twitter-tp.png" class="s-png">Twitter</a>
+            <a href="https://facebook.com/tobblekids" target="_blank" class="button p-color"><img src="./assets/instagram-tp.png" class="s-png">Instagram</a>
+            <a href="https://instagram.com/tobblekids" target="_blank" class="button p-color"><img src="./assets/facebook.svg" class="s-png">Facebook</a>
+            <a href="https://twitter.com/tobblekids"target="_blank" class="button p-color"><img src="./assets/twitter-tp.png" class="s-png">Twitter</a>
           </div>
           <div class="t-center">
-            <a href="javascript:void(0)" class="tnc">Terms & Conditions <span class="p-color">&</span> Privacy Policy</a>
+            <a href="javascript:void(0)" class="tnc raleway-font-m">Terms & Conditions <span class="p-color b-font">|</span> Privacy Policy</a>
           </div>
+          <p class="t-center raleway-font-m">Copyright @2020 All Rights Reserved with Tobble Media Pvt Ltd.</p>
         </div>
         <div class="devider"></div>
         <div class="col2">
@@ -158,51 +159,51 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="t-center">
-                    <img class="d-block logo-img2" src="../Downloads/tobble_png/Tobble App Slides_FINAL-01.png" alt="First slide">
+                    <img class="d-block logo-img2" src="./assets/Tobble App Slides_FINAL-01.png" alt="First slide">
                   </div>
                   <div class="p60">
                     <h3 class="t-center fedorika-font p-color xxx-font">Curated Content for Kids</h3>
-                    <h3 class="t-center p-color raleway-font p60">Meaningful Screen Time and 21st Century Skills</h3>
+                    <h3 class="t-center p-color raleway-font-m p60">Meaningful Screen Time and 21st Century Skills</h3>
                   </div>
                 </div>
 
                 <div class="carousel-item t-center">
                   <div>
-                    <img class="d-block logo-img2" src="../Downloads/tobble_png/Tobble App Slides_FINAL-02.png" alt="Second slide">
+                    <img class="d-block logo-img2" src="./assets/Tobble App Slides_FINAL-02.png" alt="Second slide">
                   </div>
                   <div class="p60">
                     <h3 class="t-center fedorika-font p-color xxx-font">No Advertisements</h3>
-                    <h3 class="t-center p-color raleway-font p60">No Distractions. Only Tobble!</h3>
+                    <h3 class="t-center p-color raleway-font-m p60">No Distractions. Only Tobble!</h3>
                   </div>
                 </div>
 
                 <div class="carousel-item t-center">
                   <div>
-                    <img class="d-block logo-img2" src="../Downloads/tobble_png/Tobble App Slides_FINAL-03.png" alt="Third slide">
+                    <img class="d-block logo-img2" src="./assets/Tobble App Slides_FINAL-03.png" alt="Third slide">
                   </div>
                   <div class="p60">
                     <h3 class="t-center fedorika-font p-color xxx-font">Try 14 Days Free</h3>
-                    <h3 class="t-center p-color raleway-font p60">Unrestricted Access to All Videos</h3>
+                    <h3 class="t-center p-color raleway-font-m p60">Unrestricted Access to All Videos</h3>
                   </div>
                 </div>
 
                 <div class="carousel-item t-center">
                   <div>
-                    <img class="d-block logo-img2" src="../Downloads/tobble_png/Tobble App Slide_FINAL-04.png" alt="Forth slide">
+                    <img class="d-block logo-img2" src="./assets/Tobble App Slide_FINAL-04.png" alt="Forth slide">
                   </div>
                   <div class="p60">
                     <h3 class="t-center fedorika-font p-color xxx-font">Watch On Any Device</h3>
-                    <h3 class="t-center p-color raleway-font p60">Stream on your Phone, Tablet, Laptop and TV</h3>
+                    <h3 class="t-center p-color raleway-font-m p60">Stream on your Phone, Tablet, Laptop and TV</h3>
                   </div>
                 </div>
 
                 <div class="carousel-item t-center">
                   <div>
-                    <img class="d-block logo-img2" src="../Downloads/tobble_png/Tobble App Slides_FINAL-05.png" alt="Fifth slide">
+                    <img class="d-block logo-img2" src="./assets/Tobble App Slides_FINAL-05.png" alt="Fifth slide">
                   </div>
                   <div class="p60">
                     <h3 class="t-center fedorika-font p-color xxx-font">Endless Entertainment</h3>
-                    <h3 class="t-center p-color raleway-font p60">All of Tobble, starting at just Rs.99</h3>
+                    <h3 class="t-center p-color raleway-font-m p60">All of Tobble, starting at just Rs.99</h3>
                   </div>
                 </div>
 
