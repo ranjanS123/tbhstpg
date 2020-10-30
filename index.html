@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>TobbleKids</title>
+    <style type="text/css">
+      @font-face{
+        font-family: 'fredokaone_regular';
+        src:url("./fonts/fredokaone_regular.ttf") format('truetype');
+      }
+      @font-face{
+        font-family: 'raleway_thin';
+        src:url("./fonts/raleway_thin.ttf") format('truetype');
+      }
+      @font-face{
+        font-family: 'raleway_bold';
+        src:url("./fonts/raleway_bold.ttf") format('truetype');
+      }
+      @font-face{
+        font-family: 'raleway_medium';
+        src:url("./fonts/raleway_medium.ttf") format('truetype');
+      }
+      .fedorika-font{ font-family: 'fredokaone_regular'; }
+      .raleway-font-m{ font-family: 'raleway_medium' }
+      .raleway-font{ font-family: 'raleway_thin'; }
+      .raleway-font-b{ font-family: 'raleway_bold';}
+      .p-color{color: #054568;}
+      .row{
+        width: 100%;
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+      }
+      .col1{
+        width: 49%;
+        height: auto;
+        margin: 0px;
+      }
+      .col2{
+        width: 49%;
+        height: auto;
+        margin: 0px;
+      }
+      .devider{
+        border-right: 1px solid #d9d9d9;
+        width: 1%;
+        height: auto;
+        margin: 70px 0px 70px 0px;
+      }
+      .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #e6e6e6;
+      }
+      .carousel-indicators li.active{
+        background-color: #054568;
+      }
+      .logo-img{
+        width: auto;
+        max-height: 150px;
+      }
+      .logo-img2{
+        width: auto;
+        height: 250px;
+        margin: 0px auto;
+      }
+      .t-center{
+        text-align: center;
+      }
+      .xxx-font{
+        font-size: 54px;
+      }
+      .xxx-font1{
+        font-size: 44px;
+      }
+      .pt-80 { padding-top: 80px; }
+      .pb-80{ padding: 0px 100px 100px 100px; }
+      .pb1-80{ padding: 50px 100px 30px 100px; }
+      .pad-bottom-20{ padding-bottom: 30px; }
+      .p100{ padding-top: 100px; padding-bottom: 100px; }
+      .plr100{padding-right: 100px; padding-left: 100px;}
+      .p60{
+        height: 368px;
+        padding: 20px 70px 50px 70px;
+      }
+      .button {
+        width: 150px;
+        height: 45px;
+        padding: 10px;
+        border-radius: 50px;
+        color: #054568;
+        border: 1px solid #054568;
+        margin:5px;
+        font-style: bold;
+        }
+        a.button{
+        text-decoration:none;
+        }
+      .row1{margin: 0px auto;}
+      .m-10{ margin: 10px; }
+      .pt10{ padding-top: 14px; }
+      .b-font{ font-style: bold; }
+      .s-png{
+        width: 30px;
+        float:left;
+        border-radius: 50px;
+        margin: -4px;
+      }
+      .social-btn-stck{
+        display: flex;
+        justify-content: center;
+      }
+      a.tnc{ text-decoration: none; }
+      @media (min-width: 800px) and (max-width: 1200px) {
+        body{
+          margin: 0px;
+          padding: 0px;
+          overflow: hidden;
+        }
+        .row{
+          width: auto;
+          height: 700px;
+          margin: 0px;
+          padding: 0px;
+        }
+        .devider{ margin: 70px 0px 120px 0px; }
+      }
+      @media (min-width: 1200px) and (max-width: 1500px) {
+        body{
+          margin: 0px;
+          padding: 0px;
+          overflow: hidden;
+        }
+        .row{
+          width: auto;
+          height: 768px;
+          margin: 0px;
+          padding: 0px;
+        }
+        .p100{ padding-top: 60px; padding-bottom: 30px; }
+        .devider{ margin: 45px 0px 55px 0px; }
+      }
+      @media (min-width: 1500px) and (max-width: 1800px){
+        body{ margin: 0px; padding:0px; overflow: hidden; }
+        .row{ height: 790px; }
+        .p100{ padding-top: 70px; padding-bottom: 70px; }
+        .devider{ margin: 65px 0px 100px 0px; }
+      }
+      @media (min-width: 1801px){
+        .row{
+          max-height: 890px;
+        }
+        .devider{ margin: 150px 0px 175px 0px; }
+        .p100{ padding-top: 150px; padding-bottom: 150px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col1 p100">
+        <div class="row1 t-center pb-80">
+          <img src="./assets/logo_tobbleKids_01.svg" class="logo-img">
+        </div>
+        <div class="row2 pb-80">
+          <h3 class="t-center fedorika-font"><span class="p-color raleway-font-b xxx-font">Coming</span> <span class="raleway-font-b xxx-font" style="color: #B3EA2F">Soon</span></h3>
+        </div>
+        <div class="row3">
+          <h3 class="t-center p-color pad-bottom-20">Stay Connected</h3>
+          <div class="t-center pad-bottom-20 social-btn-stck">
+            <a href="https://instagram.com/tobblekids" target="_blank" class="button p-color"><img src="./assets/icon_instagram.png" class="s-png"><span class="raleway-font-m">Instagram</span></a>
+            <a href="https://facebook.com/tobblekids" target="_blank" class="button p-color"><img src="./assets/icon_fb.png" class="s-png"><span class="raleway-font-m">Facebook</span></a>
+            <a href="https://twitter.com/tobblekids"target="_blank" class="button p-color"><img src="./assets/icon_twitter.png" class="s-png"><span class="raleway-font-m" style="margin-left: -25px;">Twitter</span></a>
+          </div>
+        </div>
+        <div class="row4 pt10">
+          <div style="display: flex; justify-content: center;">
+            <a href="./terms_of_use.html" target="_blank" class="tnc raleway-font-m">Terms of Use <span class="p-color b-font">|&nbsp</span></a>
+            <a href="./privacy.html" target="_blank" class="tnc raleway-font-m">Privacy Policy</a>
+          </div>
+          <p class="t-center raleway-font-m" style="color:#939393; padding-top:15px;">Copyright @2020 All Rights Reserved with Tobble Media Pvt Ltd.</p>
+        </div>
+      </div>
+      
+      <div class="devider"></div>
+
+
+      <div class="col2 p100">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" style="height: 650px;">   
+              <div class="carousel-item active">
+                <div class="row1 t-center"> <!-- first ROW -->
+                  <img class="d-block logo-img2" src="./assets/slider_01.png" alt="First slide">
+                </div>
+                <div class="row2 t-center pt-80"> <!-- Second ROW -->
+                  <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">Curated Content for Kids</h3>
+                </div>
+                <div class="row3 t-center"> <!-- Third ROW -->
+                  <h3 class="t-center p-color raleway-font-m plr100">Meaningful Screen Time and 21st Century Skills</h3>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row1 t-center"> <!-- first ROW -->
+                  <img class="d-block logo-img2" src="./assets/slider_02.png" alt="Second slide">
+                </div>
+                <div class="row2 t-center pt-80"> <!-- Second ROW -->
+                  <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">No Advertisements</h3>
+                </div>
+                <div class="row3 t-center"> <!-- Third ROW -->
+                  <h3 class="t-center p-color raleway-font-m plr100 ">No Distractions. Only Tobble!</h3>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row1 t-center"> <!-- first ROW -->
+                  <img class="d-block logo-img2" src="./assets/slide_03.png" alt="Third slide">
+                </div>
+                <div class="row2 t-center pt-80"> <!-- Second ROW -->
+                  <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">Try 14 Days Free</h3>
+                </div>
+                <div class="row3 t-center"> <!-- Third ROW -->
+                  <h3 class="t-center p-color raleway-font-m plr100">Unrestricted Access to All Videos</h3>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row1 t-center"> <!-- first ROW -->
+                  <img class="d-block logo-img2" src="./assets/slide_04.png" alt="Fourth slide">
+                </div>
+                <div class="row2 t-center pt-80"> <!-- Second ROW -->
+                  <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">Watch On Any Device</h3>
+                </div>
+                <div class="row3 t-center"> <!-- Third ROW -->
+                  <h3 class="t-center p-color raleway-font-m plr100">Stream on your Phone, Tablet, Laptop and TV</h3>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row1 t-center"> <!-- first ROW -->
+                  <img class="d-block logo-img2" src="./assets/slide_05.png" alt="Fifth slide">
+                </div>
+                <div class="row2 t-center pt-80"> <!-- Second ROW -->
+                  <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">Endless Entertainment</h3>
+                </div>
+                <div class="row3 t-center"> <!-- Third ROW -->
+                  <h3 class="t-center p-color raleway-font-m plr100">Covering Wide Range of Content Categories</h3>
+                </div>
+              </div>
+            </div>
+
+
+             <ol class="carousel-indicators row4" style="position: relative;">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              </ol>
+          </div>
+      </div>
+
+
+
+    </div> <!-- Whole Row Closed -->
+
+
+
+<script type="text/javascript">
+    $('#carouselExampleControls').bind('mousewheel', function(e){
+      if(e.originalEvent.wheelDelta /120 > 0) {
+        $(this).carousel('next');
+      }
+      else{
+        $(this).carousel('prev');
+      }
+    });
+    $(document).keyup(function(e){
+      if(e.keycode ===39) {
+        $(this).carousel('next');
+      }
+      else{
+        $(this).carousel('prev');
+      }
+    });
+    $('.carousel-indicators > li').click(function() {
+        var item = Number($(this).attr('data-slide-to'));
+        $('#carouselExampleControls').carousel(item);
+        $('.carousel-linked-nav .active').removeClass('active');
+        $(this).parent().addClass('active');
+        return false;
+    });
+    </script>
+  </body>
+</html>
