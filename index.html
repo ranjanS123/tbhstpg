@@ -8,7 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js'></script>
+   <link rel="icon" href="./assets/star.svg" type="image/gif">
     <title>TobbleKids</title>
     <style type="text/css">
       @font-face{
@@ -75,12 +76,8 @@
       .t-center{
         text-align: center;
       }
-      .xxx-font{
-        font-size: 54px;
-      }
-      .xxx-font1{
-        font-size: 44px;
-      }
+      .xxx-font{ font-size: 54px; }
+      .xxx-font1{ font-size: 44px; }
       .pt-80 { padding-top: 80px; }
       .pb-80{ padding: 0px 100px 100px 100px; }
       .pb1-80{ padding: 50px 100px 30px 100px; }
@@ -118,26 +115,92 @@
         display: flex;
         justify-content: center;
       }
-      a.tnc{ text-decoration: none; }
-      @media (min-width: 800px) and (max-width: 1200px) {
-        body{
-          margin: 0px;
-          padding: 0px;
-          overflow: hidden;
-        }
-        .row{
-          width: auto;
-          height: 700px;
-          margin: 0px;
-          padding: 0px;
-        }
+      a.tnc, button.tnc{ text-decoration: none; }
+      .c-height{ height: 650px; }
+      .sec0,.mobi-view{display: none;}
+      .copyrite{ color:#939393; padding: 7px 0px 0px 0px; }
+      @media(max-width: 500px){
+        .col1,.col2, body{width: auto; }
+        .sec1,.devider,.social-btn-stck,.no-display{display: none;}
+        .sec0,.mobi-view{display: block;}
+        .row{display: flex; flex-direction: column-reverse;}
+        .col1,.sec2{ order:2; width: 100%; }
+        .col2,.sec3{ order:3; width: 100%; }
+        .row2,.row3,.row4{ width: 100%; }
+        .inst{ order: 1; }
+        .fbc{ order: 2; }
+        .twt{ order: 3; }
+        .social-btn-stck{ flex-direction: column; }
+        a.button{ border:0px; width: 0px; padding-right: 30px; }
+        .mobi-view{ display:inline-flex; width:100%; justify-content:center;padding-right: 15px;}
+        .s-png{width: 50px; float: none; margin: 0px;}
+        .pl15{padding-left: 15px;}
+        .p100{ padding-top: 50px;padding-bottom: 50px; }
+        .c-height{ height: 450px; }
+        .pb-80{ padding: 0px 0px 100px 0px; }
+        .pb1-80{ padding: 30px 25px 10px 25px; }
+        .plr100{ padding-right: 30px; padding-left: 30px; }
+        .logo-img{ height: 130px; }
+        .logo-img2{ height: 155px; }
+        .xxx-font{ font-size: 35px; }
+        .xxx-font1{ font-size: 30px; }
+        .pt-80{ padding-top: 50px; }
+        .carousel-indicators { position: static; margin: 0px auto; }
+        .copyrite{ padding: 15px 10px 0px 10px; }
+      }
+      @media (min-width: 500px) and (max-width: 768px) {
+        .col1,.col2, body{width: 100%; }
+        .sec1,.devider,.no-display{display: none;}
+        .sec0{display: block;}
+        .row{display: flex; flex-direction: column-reverse;}
+        .p100{ padding-top: 70px;padding-bottom: 70px; }
+        .c-height{ height: 500px; }
+        .col1,.sec2{ order:2; width: 100%; }
+        .col2,.sec3{ order:3; width: 100%; }
+        .logo-img{ height: 150px; }
+        .xxx-font{ font-size: 40px; }
+        a.button{ width: 170px; }
+        .logo-img2{ height: 200px; }
+        .pb1-80{ padding: 30px 25px 10px 25px; }
+      }
+      @media(min-width: 769px) and (max-width: 799px){
+        .button{padding:5px;}
+        .s-png{margin: 5px;}
+        .social-btn-stck{display: none;}
+        .mobi-view{display: block;}
+        .xxx-font1{font-size:35px;}
+        .c-height{ height: 550px; }
+        .social-btn-stck{ flex-direction: column; }
+        a.button{ border:0px; width: 0px; padding-right: 30px; }
+        .mobi-view{ display:inline-flex; width:100%; justify-content:center;padding-right: 15px;}
+        .s-png{width: 50px; float: none; margin: 0px;}
+        .pl15{padding-left: 15px;}
+        .pb1-80 { padding: 30px 40px 30px 40px;}
+        .plr100{padding-left: 40px;padding-right: 40px;}
+        .logo-img{ height: 125px; }
+        .logo-img2{ height: 170px; }
+        .p100{padding-bottom: 50px;}
+      }
+      @media (min-width: 800px) and (max-width: 1050px) {
+        body{margin: 0px;padding: 0px;overflow-x: hidden;}
+        .row{width: auto;height: 800px;margin: 0px;padding:0px;}
+        .plr100{padding-left: 85px;padding-right: 85px;}
+        .xxx-font{font-size: 46px;}
+        .xxx-font1{font-size: 40px;}
+        .pb1-80{ padding: 50px 50px 30px 50px;}
+        .p100{padding-bottom: 70px;}
+      }
+      @media (min-width: 1050px) and (max-width: 1200px) {
+        body{margin: 0px;padding: 0px;overflow-x: hidden;}
+        .row{width: auto;height: 700px;margin: 0px;padding:0px;}
         .devider{ margin: 70px 0px 120px 0px; }
       }
-      @media (min-width: 1200px) and (max-width: 1500px) {
+
+      @media (min-width: 1200px) and (max-width: 1400px) {
         body{
           margin: 0px;
           padding: 0px;
-          overflow: hidden;
+          overflow-x: hidden;
         }
         .row{
           width: auto;
@@ -145,8 +208,14 @@
           margin: 0px;
           padding: 0px;
         }
+        .xxx-font1{font-size: 35px;}
         .p100{ padding-top: 60px; padding-bottom: 30px; }
         .devider{ margin: 45px 0px 55px 0px; }
+      }
+      @media (min-width: 1400px) and (max-width: 1500px) {
+        body{ overflow: hidden; }
+        .p100{ padding-top: 100px; padding-bottom: 30px; }
+        .devider{ margin: 75px 0px 55px 0px; }
       }
       @media (min-width: 1500px) and (max-width: 1800px){
         body{ margin: 0px; padding:0px; overflow: hidden; }
@@ -161,40 +230,52 @@
         .devider{ margin: 150px 0px 175px 0px; }
         .p100{ padding-top: 150px; padding-bottom: 150px; }
       }
+      .abt-us-content{ line-height: 28px; padding:20px; }
+      .abtus-btn{ border: none;background-color: #fff; }
+      .sec-col{color:#007bff;}
+      .plr20{padding-left: 20px; padding-right: 20px;}
+      button:focus{ outline:0px; }
     </style>
   </head>
   <body>
+    <div class="t-center p100 sec0">
+      <img src="./assets/logo_tobbleKids_01.svg" class="logo-img">
+    </div>
     <div class="row">
       <div class="col1 p100">
-        <div class="row1 t-center pb-80">
+        <div class="row1 t-center pb-80 sec1">
           <img src="./assets/logo_tobbleKids_01.svg" class="logo-img">
         </div>
-        <div class="row2 pb-80">
+        <div class="row2 pb-80 sec2">
           <h3 class="t-center fedorika-font"><span class="p-color raleway-font-b xxx-font">Coming</span> <span class="raleway-font-b xxx-font" style="color: #B3EA2F">Soon</span></h3>
         </div>
-        <div class="row3">
+        <div class="row3 sec4">
           <h3 class="t-center p-color pad-bottom-20">Stay Connected</h3>
           <div class="t-center pad-bottom-20 social-btn-stck">
-            <a href="https://instagram.com/tobblekids" target="_blank" class="button p-color"><img src="./assets/icon_instagram.png" class="s-png"><span class="raleway-font-m">Instagram</span></a>
-            <a href="https://facebook.com/tobblekids" target="_blank" class="button p-color"><img src="./assets/icon_fb.png" class="s-png"><span class="raleway-font-m">Facebook</span></a>
-            <a href="https://twitter.com/tobblekids"target="_blank" class="button p-color"><img src="./assets/icon_twitter.png" class="s-png"><span class="raleway-font-m" style="margin-left: -25px;">Twitter</span></a>
+            <a href="https://instagram.com/tobblekids" target="_blank" class="button p-color inst"><img src="./assets/icon_instagram.png" class="s-png"><span class="raleway-font-m">Instagram</span></a>
+            <a href="https://facebook.com/tobblekids" target="_blank" class="button p-color fbc"><img src="./assets/icon_fb.png" class="s-png"><span class="raleway-font-m">Facebook</span></a>
+            <a href="https://twitter.com/tobblekids"target="_blank" class="button p-color twt"><img src="./assets/icon_twitter.png" class="s-png"><span class="raleway-font-m" style="margin-left: -25px;">Twitter</span></a>
           </div>
+          <div class="t-center pad-bottom-20 mobi-view">
+            <a href="https://instagram.com/tobblekids" target="_blank" class="button p-color inst"><img src="./assets/icon_instagram.png" class="s-png"></a>
+            <a href="https://facebook.com/tobblekids" target="_blank" class="button p-color fbc pl15"><img src="./assets/icon_fb.png" class="s-png"></a>
+            <a href="https://twitter.com/tobblekids"target="_blank" class="button p-color twt pl15"><img src="./assets/icon_twitter.png" class="s-png"></a>
+          </div>
+          <p class="t-center"><a href="" class="tnc">Contact Us:&nbsp <span class="p-color">support@tobblekids.com</span></a></p>
         </div>
-        <div class="row4 pt10">
+        <div class="row4 pt10 sec5">
           <div style="display: flex; justify-content: center;">
-            <a href="./terms_of_use.html" target="_blank" class="tnc raleway-font-m">Terms of Use <span class="p-color b-font">|&nbsp</span></a>
-            <a href="./privacy.html" target="_blank" class="tnc raleway-font-m">Privacy Policy</a>
+            <a href="./terms_of_use.html" target="_blank" class="tnc raleway-font-m">Terms of Use <span class="p-color b-font">&nbsp|&nbsp</span></a>
+            <a href="./privacy.html" target="_blank" class="tnc raleway-font-m"> Privacy Policy <span class="p-color b-font">&nbsp|&nbsp</span></a>
+            <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="sec-col abtus-btn tnc"> About Us </button>
           </div>
-          <p class="t-center raleway-font-m" style="color:#939393; padding-top:15px;">Copyright @2020 All Rights Reserved with Tobble Media Pvt Ltd.</p>
+          <p class="t-center raleway-font-m copyrite">Copyright ©2020 All Rights Reserved with Tobble Media Private Limited.</p>
         </div>
       </div>
-      
       <div class="devider"></div>
-
-
-      <div class="col2 p100">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" style="height: 650px;">   
+      <div class="col2 p100 sec3">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner c-height">   
               <div class="carousel-item active">
                 <div class="row1 t-center"> <!-- first ROW -->
                   <img class="d-block logo-img2" src="./assets/slider_01.png" alt="First slide">
@@ -203,7 +284,7 @@
                   <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">Curated Content for Kids</h3>
                 </div>
                 <div class="row3 t-center"> <!-- Third ROW -->
-                  <h3 class="t-center p-color raleway-font-m plr100">Meaningful Screen Time and 21st Century Skills</h3>
+                  <h3 class="t-center p-color raleway-font-m plr100">Meaningful Screen Time </br>and 21st Century Skills</h3>
                 </div>
               </div>
 
@@ -215,7 +296,7 @@
                   <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">No Advertisements</h3>
                 </div>
                 <div class="row3 t-center"> <!-- Third ROW -->
-                  <h3 class="t-center p-color raleway-font-m plr100 ">No Distractions. Only Tobble!</h3>
+                  <h3 class="t-center p-color raleway-font-m plr100 ">No Distractions. </br>Only Tobble!</h3>
                 </div>
               </div>
 
@@ -227,7 +308,7 @@
                   <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">Try 14 Days Free</h3>
                 </div>
                 <div class="row3 t-center"> <!-- Third ROW -->
-                  <h3 class="t-center p-color raleway-font-m plr100">Unrestricted Access to All Videos</h3>
+                  <h3 class="t-center p-color raleway-font-m plr100">Unrestricted Access <br>to All Videos</h3>
                 </div>
               </div>
 
@@ -239,7 +320,7 @@
                   <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">Watch On Any Device</h3>
                 </div>
                 <div class="row3 t-center"> <!-- Third ROW -->
-                  <h3 class="t-center p-color raleway-font-m plr100">Stream on your Phone, Tablet, Laptop and TV</h3>
+                  <h3 class="t-center p-color raleway-font-m plr100">Stream on your Phone, </br>Tablet, Laptop and TV</h3>
                 </div>
               </div>
 
@@ -251,23 +332,50 @@
                   <h3 class="t-center fedorika-font p-color xxx-font1 pb1-80">Endless Entertainment</h3>
                 </div>
                 <div class="row3 t-center"> <!-- Third ROW -->
-                  <h3 class="t-center p-color raleway-font-m plr100">Covering Wide Range of Content Categories</h3>
+                  <h3 class="t-center p-color raleway-font-m plr100">Covering Wide Range of </br>Content Categories</h3>
                 </div>
               </div>
             </div>
+            <a class="carousel-control-prev no-display" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true" style="background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='green' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E'); height: 35px;"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next no-display" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #99c2ff; fill:black; height: 35px;"></span>
+              <span class="sr-only">Next</span>
+            </a>
 
-
-             <ol class="carousel-indicators row4" style="position: relative;">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-              </ol>
+            <ol class="carousel-indicators row4" style="position: relative;">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
           </div>
       </div>
 
-
+      <div class="modal fade bd-example-modal-xl " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title raleway_bold padding-20 p-color plr20" id="exampleModalLongTitle">About Us</h5>
+            </div>
+            <div class="modal-body">
+              <p class="abt-us-content raleway-font-m">Once upon a time,<br>
+              There were thousands and thousands of young parents who had no idea of what their child should watch or rather what their child is watching !! <br>
+              They started showing their children what was popular but not necessarily what was appropriate. <br>
+              These were dark times. <br>
+              Even if parents wanted to make their child's screen time meaningful, where would they find such content? <br>
+              Fortunately, times changed and a new platform came into being. <br>
+              A platform that curates content for kids, so that parents don't have to. <br>
+              A platform that sources original content from around the world, so that parents don't have to. <br>
+              A platform that is a perfect mix of Entertainment and Learning. <br>
+              And we're extremely happy to be associated with this endeavour !! </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div> <!-- Whole Row Closed -->
 
@@ -283,11 +391,16 @@
       }
     });
     $(document).keyup(function(e){
-      if(e.keycode ===39) {
-        $(this).carousel('next');
-      }
-      else{
-        $(this).carousel('prev');
+      console.log(typeof(e.keyCode));
+      switch(e.keyCode){
+        case 37:
+          $(this).carousel('prev');
+        case 38:
+          $(this).carousel('next');
+        case 39:
+          $(this).carousel('next');
+        case 40:
+          $(this).carousel('prev');
       }
     });
     $('.carousel-indicators > li').click(function() {
@@ -296,6 +409,21 @@
         $('.carousel-linked-nav .active').removeClass('active');
         $(this).parent().addClass('active');
         return false;
+    });
+
+    $(".carousel-control-prev-icon").click(function(){
+      $('#carouselExampleControls').carousel(($('.carousel-control-prev').attr('data-slide')));
+    })
+    $(".carousel-control-next-icon").click(function(){
+      $('#carouselExampleControls').carousel(($('.carousel-control-next').attr('data-slide')));
+    })
+
+    jQuery(".carousel").swipe({
+      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+          if (direction == 'left') jQuery(this).carousel('next');
+          if (direction == 'right') jQuery(this).carousel('prev');
+      },
+      allowPageScroll: "vertical" 
     });
     </script>
   </body>
