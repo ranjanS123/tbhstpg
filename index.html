@@ -82,6 +82,7 @@
       .pb-80{ padding: 0px 100px 100px 100px; }
       .pb1-80{ padding: 50px 100px 30px 100px; }
       .pad-bottom-20{ padding-bottom: 30px; }
+      .pad-bottom-15{ padding-bottom: 15px; }
       .p100{ padding-top: 100px; padding-bottom: 100px; }
       .plr100{padding-right: 100px; padding-left: 100px;}
       .p60{
@@ -194,6 +195,7 @@
         body{margin: 0px;padding: 0px;overflow-x: hidden;}
         .row{width: auto;height: 700px;margin: 0px;padding:0px;}
         .devider{ margin: 70px 0px 120px 0px; }
+        .copyrite{ color:#939393; padding: 0px; font-size: 12px;}
       }
 
       @media (min-width: 1200px) and (max-width: 1400px) {
@@ -211,6 +213,7 @@
         .xxx-font1{font-size: 35px;}
         .p100{ padding-top: 60px; padding-bottom: 30px; }
         .devider{ margin: 45px 0px 55px 0px; }
+        .copyrite{ color:#939393; padding: 0px; font-size: 14px;}
       }
       @media (min-width: 1400px) and (max-width: 1500px) {
         body{ overflow: hidden; }
@@ -231,10 +234,13 @@
         .p100{ padding-top: 150px; padding-bottom: 150px; }
       }
       .abt-us-content{ line-height: 28px; padding:20px; }
-      .abtus-btn{ border: none;background-color: #fff; }
+      .abtus-btn{ border: none;background-color: #fff; cursor: pointer;}
+      .abtus-btn:hover{ color: #0056b3;}
       .sec-col{color:#007bff;}
       .plr20{padding-left: 20px; padding-right: 20px;}
       button:focus{ outline:0px; }
+      .mb10{ margin-bottom: 10px; }
+      .pb10{padding-bottom: 10px;}
     </style>
   </head>
   <body>
@@ -251,24 +257,24 @@
         </div>
         <div class="row3 sec4">
           <h3 class="t-center p-color pad-bottom-20">Stay Connected</h3>
-          <div class="t-center pad-bottom-20 social-btn-stck">
+          <div class="t-center pad-bottom-15 social-btn-stck">
             <a href="https://instagram.com/tobblekids" target="_blank" class="button p-color inst"><img src="./assets/icon_instagram.png" class="s-png"><span class="raleway-font-m">Instagram</span></a>
             <a href="https://facebook.com/tobblekids" target="_blank" class="button p-color fbc"><img src="./assets/icon_fb.png" class="s-png"><span class="raleway-font-m">Facebook</span></a>
             <a href="https://twitter.com/tobblekids"target="_blank" class="button p-color twt"><img src="./assets/icon_twitter.png" class="s-png"><span class="raleway-font-m" style="margin-left: -25px;">Twitter</span></a>
           </div>
-          <div class="t-center pad-bottom-20 mobi-view">
+          <div class="t-center pad-bottom-15 mobi-view">
             <a href="https://instagram.com/tobblekids" target="_blank" class="button p-color inst"><img src="./assets/icon_instagram.png" class="s-png"></a>
             <a href="https://facebook.com/tobblekids" target="_blank" class="button p-color fbc pl15"><img src="./assets/icon_fb.png" class="s-png"></a>
             <a href="https://twitter.com/tobblekids"target="_blank" class="button p-color twt pl15"><img src="./assets/icon_twitter.png" class="s-png"></a>
           </div>
-          <p class="t-center"><a href="" class="tnc">Contact Us:&nbsp <span class="p-color">support@tobblekids.com</span></a></p>
         </div>
-        <div class="row4 pt10 sec5">
-          <div style="display: flex; justify-content: center;">
+        <div class="row4 sec5">
+          <div class="pb10" style="display: flex; justify-content: center;">
             <a href="./terms_of_use.html" target="_blank" class="tnc raleway-font-m">Terms of Use <span class="p-color b-font">&nbsp|&nbsp</span></a>
             <a href="./privacy.html" target="_blank" class="tnc raleway-font-m"> Privacy Policy <span class="p-color b-font">&nbsp|&nbsp</span></a>
-            <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="sec-col abtus-btn tnc"> About Us </button>
+            <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="sec-col raleway-font-m abtus-btn tnc"> About Us </button>
           </div>
+          <p class="t-center mb10"><a href="" class="tnc">Contact Us:&nbsp <span class="p-color">support@tobblekids.com</span></a></p>
           <p class="t-center raleway-font-m copyrite">Copyright ©2020 All Rights Reserved with Tobble Media Private Limited.</p>
         </div>
       </div>
@@ -341,7 +347,7 @@
               <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next no-display" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #99c2ff; fill:black; height: 35px;"></span>
+              <span class="carousel-control-next-icon1" aria-hidden="true" style="background-color: #99c2ff; fill:black; height: 35px;"></span>
               <span class="sr-only">Next</span>
             </a>
 
